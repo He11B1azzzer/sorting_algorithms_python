@@ -23,7 +23,7 @@ def shell_sort(arr, length):
 def quik_sort(arr,first,last):
     f = first
     l = last
-    pivot = arr[int((f + l) / 2)]
+    pivot = arr[(f + l) // 2]
     while f <= l:
         while arr[f] < pivot:
             f += 1
@@ -35,7 +35,7 @@ def quik_sort(arr,first,last):
             l -= 1
     if first < l:
         quik_sort(arr,first,l)
-    elif f < last:
+    if f < last:
         quik_sort(arr,f,last)
     return arr
 
